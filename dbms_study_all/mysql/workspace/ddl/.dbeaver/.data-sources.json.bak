@@ -1,0 +1,49 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-197ce99b9ca-60885f5d236f492f": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"configurationType": "MANUAL",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 8.0",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "TRUE"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-197ce99b9ca-60885f5d236f492f": {
+			"ddl": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202507062307\"><entities><data-source id=\"mysql8-197ce99b9ca-60885f5d236f492f\"><entity id=\"1\" name=\"tbl_cart\" fq-name=\"ddl.tbl_cart\" order=\"0\" x=\"539\" y=\"20\"><path name=\"ddl\"/></entity><entity id=\"2\" name=\"tbl_delivery\" fq-name=\"ddl.tbl_delivery\" order=\"2\" x=\"20\" y=\"406\"><path name=\"ddl\"/></entity><entity id=\"3\" name=\"tbl_ecommerce_company\" fq-name=\"ddl.tbl_ecommerce_company\" order=\"3\" x=\"835\" y=\"471\"><path name=\"ddl\"/></entity><entity id=\"4\" name=\"tbl_ecommerce_product\" fq-name=\"ddl.tbl_ecommerce_product\" order=\"4\" x=\"539\" y=\"457\"><path name=\"ddl\"/></entity><entity id=\"5\" name=\"tbl_ecommerce_user\" fq-name=\"ddl.tbl_ecommerce_user\" order=\"5\" x=\"835\" y=\"284\"><path name=\"ddl\"/></entity><entity id=\"6\" name=\"tbl_payment\" fq-name=\"ddl.tbl_payment\" order=\"6\" x=\"262\" y=\"292\"><path name=\"ddl\"/></entity><entity id=\"7\" name=\"tbl_refund\" fq-name=\"ddl.tbl_refund\" order=\"1\" x=\"20\" y=\"163\"><path name=\"ddl\"/></entity><entity id=\"8\" name=\"tbl_register_card\" fq-name=\"ddl.tbl_register_card\" order=\"7\" x=\"539\" y=\"207\"><path name=\"ddl\"/></entity><entity id=\"9\" name=\"tbl_review\" fq-name=\"ddl.tbl_review\" order=\"8\" x=\"262\" y=\"507\"><path name=\"ddl\"/></entity></data-source></entities><relations><relation name=\"fk_ecommerce_product_ecommerce_company\" fq-name=\"ddl.tbl_ecommerce_product.fk_ecommerce_product_ecommerce_company\" type=\"fk\" pk-ref=\"3\" fk-ref=\"4\"/><relation name=\"fk_payment_ecommerce_company\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_company\" type=\"fk\" pk-ref=\"3\" fk-ref=\"6\"/><relation name=\"fk_payment_ecommerce_product\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_product\" type=\"fk\" pk-ref=\"4\" fk-ref=\"6\"/><relation name=\"fk_review_ecommerce_product\" fq-name=\"ddl.tbl_review.fk_review_ecommerce_product\" type=\"fk\" pk-ref=\"4\" fk-ref=\"9\"/><relation name=\"fk_cart_ecommerce_user\" fq-name=\"ddl.tbl_cart.fk_cart_ecommerce_user\" type=\"fk\" pk-ref=\"5\" fk-ref=\"1\"/><relation name=\"fk_payment_ecommerce_user\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_user\" type=\"fk\" pk-ref=\"5\" fk-ref=\"6\"/><relation name=\"fk_registered_card_ecommerce_user\" fq-name=\"ddl.tbl_register_card.fk_registered_card_ecommerce_user\" type=\"fk\" pk-ref=\"5\" fk-ref=\"8\"/><relation name=\"fk_review_ecommerce_user\" fq-name=\"ddl.tbl_review.fk_review_ecommerce_user\" type=\"fk\" pk-ref=\"5\" fk-ref=\"9\"/><relation name=\"fk_delivery_payment\" fq-name=\"ddl.tbl_delivery.fk_delivery_payment\" type=\"fk\" pk-ref=\"6\" fk-ref=\"2\"/><relation name=\"fk_refund_payment\" fq-name=\"ddl.tbl_refund.fk_refund_payment\" type=\"fk\" pk-ref=\"6\" fk-ref=\"7\"/><relation name=\"fk_payment_register_card\" fq-name=\"ddl.tbl_payment.fk_payment_register_card\" type=\"fk\" pk-ref=\"8\" fk-ref=\"6\"/></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

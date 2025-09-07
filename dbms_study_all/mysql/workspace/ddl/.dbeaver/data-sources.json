@@ -1,0 +1,49 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-197ce99b9ca-60885f5d236f492f": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"configurationType": "MANUAL",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 8.0",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "TRUE"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-197ce99b9ca-60885f5d236f492f": {
+			"ddl": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202507070905\"><entities><data-source id=\"mysql8-197ce99b9ca-60885f5d236f492f\"><entity id=\"1\" name=\"tbl_advertisement\" fq-name=\"ddl.tbl_advertisement\" order=\"0\" x=\"835\" y=\"457\"><path name=\"ddl\"/></entity><entity id=\"2\" name=\"tbl_advertising_company\" fq-name=\"ddl.tbl_advertising_company\" order=\"1\" x=\"1160\" y=\"443\"><path name=\"ddl\"/></entity><entity id=\"3\" name=\"tbl_cart\" fq-name=\"ddl.tbl_cart\" order=\"2\" x=\"539\" y=\"837\"><path name=\"ddl\"/></entity><entity id=\"4\" name=\"tbl_category_a\" fq-name=\"ddl.tbl_category_a\" order=\"3\" x=\"539\" y=\"471\"><path name=\"ddl\"/></entity><entity id=\"5\" name=\"tbl_category_b\" fq-name=\"ddl.tbl_category_b\" order=\"4\" x=\"262\" y=\"471\"><path name=\"ddl\"/></entity><entity id=\"6\" name=\"tbl_category_c\" fq-name=\"ddl.tbl_category_c\" order=\"5\" x=\"20\" y=\"471\"><path name=\"ddl\"/></entity><entity id=\"7\" name=\"tbl_check_winning\" fq-name=\"ddl.tbl_check_winning\" order=\"6\" x=\"20\" y=\"147\"><path name=\"ddl\"/></entity><entity id=\"8\" name=\"tbl_choice\" fq-name=\"ddl.tbl_choice\" order=\"7\" x=\"539\" y=\"630\"><path name=\"ddl\"/></entity><entity id=\"9\" name=\"tbl_client_company\" fq-name=\"ddl.tbl_client_company\" order=\"8\" x=\"835\" y=\"644\"><path name=\"ddl\"/></entity><entity id=\"10\" name=\"tbl_delivery\" fq-name=\"ddl.tbl_delivery\" order=\"14\" x=\"20\" y=\"1223\"><path name=\"ddl\"/></entity><entity id=\"11\" name=\"tbl_drink\" fq-name=\"ddl.tbl_drink\" order=\"9\" x=\"539\" y=\"119\"><path name=\"ddl\"/></entity><entity id=\"12\" name=\"tbl_ecommerce_company\" fq-name=\"ddl.tbl_ecommerce_company\" order=\"15\" x=\"835\" y=\"1288\"><path name=\"ddl\"/></entity><entity id=\"13\" name=\"tbl_ecommerce_product\" fq-name=\"ddl.tbl_ecommerce_product\" order=\"16\" x=\"539\" y=\"1274\"><path name=\"ddl\"/></entity><entity id=\"14\" name=\"tbl_ecommerce_user\" fq-name=\"ddl.tbl_ecommerce_user\" order=\"17\" x=\"835\" y=\"1101\"><path name=\"ddl\"/></entity><entity id=\"15\" name=\"tbl_payment\" fq-name=\"ddl.tbl_payment\" order=\"18\" x=\"262\" y=\"1109\"><path name=\"ddl\"/></entity><entity id=\"16\" name=\"tbl_product\" fq-name=\"ddl.tbl_product\" order=\"10\" x=\"835\" y=\"175\"><path name=\"ddl\"/></entity><entity id=\"17\" name=\"tbl_refund\" fq-name=\"ddl.tbl_refund\" order=\"13\" x=\"20\" y=\"980\"><path name=\"ddl\"/></entity><entity id=\"18\" name=\"tbl_register_card\" fq-name=\"ddl.tbl_register_card\" order=\"19\" x=\"539\" y=\"1024\"><path name=\"ddl\"/></entity><entity id=\"19\" name=\"tbl_review\" fq-name=\"ddl.tbl_review\" order=\"20\" x=\"262\" y=\"1324\"><path name=\"ddl\"/></entity><entity id=\"20\" name=\"tbl_winner\" fq-name=\"ddl.tbl_winner\" order=\"11\" x=\"262\" y=\"256\"><path name=\"ddl\"/></entity><entity id=\"21\" name=\"tbl_winning\" fq-name=\"ddl.tbl_winning\" order=\"12\" x=\"262\" y=\"20\"><path name=\"ddl\"/></entity></data-source></entities><relations><relation name=\"fk_category_A_advertisement\" fq-name=\"ddl.tbl_category_a.fk_category_A_advertisement\" type=\"fk\" pk-ref=\"1\" fk-ref=\"4\"/><relation name=\"fk_choice_advertisement\" fq-name=\"ddl.tbl_choice.fk_choice_advertisement\" type=\"fk\" pk-ref=\"1\" fk-ref=\"8\"/><relation name=\"fk_advertisement_advertising_company\" fq-name=\"ddl.tbl_advertisement.fk_advertisement_advertising_company\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"fk_category_B_category_A\" fq-name=\"ddl.tbl_category_b.fk_category_B_category_A\" type=\"fk\" pk-ref=\"4\" fk-ref=\"5\"/><relation name=\"fk_category_C_category_B\" fq-name=\"ddl.tbl_category_c.fk_category_C_category_B\" type=\"fk\" pk-ref=\"5\" fk-ref=\"6\"/><relation name=\"fk_choice_client_company\" fq-name=\"ddl.tbl_choice.fk_choice_client_company\" type=\"fk\" pk-ref=\"9\" fk-ref=\"8\"/><relation name=\"fk_check_winning_drink\" fq-name=\"ddl.tbl_check_winning.fk_check_winning_drink\" type=\"fk\" pk-ref=\"11\" fk-ref=\"7\"/><relation name=\"fk_winning_drink\" fq-name=\"ddl.tbl_winning.fk_winning_drink\" type=\"fk\" pk-ref=\"11\" fk-ref=\"21\"/><relation name=\"fk_ecommerce_product_ecommerce_company\" fq-name=\"ddl.tbl_ecommerce_product.fk_ecommerce_product_ecommerce_company\" type=\"fk\" pk-ref=\"12\" fk-ref=\"13\"/><relation name=\"fk_payment_ecommerce_company\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_company\" type=\"fk\" pk-ref=\"12\" fk-ref=\"15\"/><relation name=\"fk_payment_ecommerce_product\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_product\" type=\"fk\" pk-ref=\"13\" fk-ref=\"15\"/><relation name=\"fk_review_ecommerce_product\" fq-name=\"ddl.tbl_review.fk_review_ecommerce_product\" type=\"fk\" pk-ref=\"13\" fk-ref=\"19\"/><relation name=\"fk_cart_ecommerce_user\" fq-name=\"ddl.tbl_cart.fk_cart_ecommerce_user\" type=\"fk\" pk-ref=\"14\" fk-ref=\"3\"/><relation name=\"fk_payment_ecommerce_user\" fq-name=\"ddl.tbl_payment.fk_payment_ecommerce_user\" type=\"fk\" pk-ref=\"14\" fk-ref=\"15\"/><relation name=\"fk_registered_card_ecommerce_user\" fq-name=\"ddl.tbl_register_card.fk_registered_card_ecommerce_user\" type=\"fk\" pk-ref=\"14\" fk-ref=\"18\"/><relation name=\"fk_review_ecommerce_user\" fq-name=\"ddl.tbl_review.fk_review_ecommerce_user\" type=\"fk\" pk-ref=\"14\" fk-ref=\"19\"/><relation name=\"fk_delivery_payment\" fq-name=\"ddl.tbl_delivery.fk_delivery_payment\" type=\"fk\" pk-ref=\"15\" fk-ref=\"10\"/><relation name=\"fk_refund_payment\" fq-name=\"ddl.tbl_refund.fk_refund_payment\" type=\"fk\" pk-ref=\"15\" fk-ref=\"17\"/><relation name=\"fk_drink_product\" fq-name=\"ddl.tbl_drink.fk_drink_product\" type=\"fk\" pk-ref=\"16\" fk-ref=\"11\"/><relation name=\"fk_payment_register_card\" fq-name=\"ddl.tbl_payment.fk_payment_register_card\" type=\"fk\" pk-ref=\"18\" fk-ref=\"15\"/><relation name=\"fk_check_winning_winner\" fq-name=\"ddl.tbl_check_winning.fk_check_winning_winner\" type=\"fk\" pk-ref=\"20\" fk-ref=\"7\"/><relation name=\"fk_check_winning_winning\" fq-name=\"ddl.tbl_check_winning.fk_check_winning_winning\" type=\"fk\" pk-ref=\"21\" fk-ref=\"7\"/></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
